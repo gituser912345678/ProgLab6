@@ -1,5 +1,6 @@
 package network;
 
+import collectionManagers.StartCommand;
 import data.Person;
 import data.generators.PersonGenerator;
 

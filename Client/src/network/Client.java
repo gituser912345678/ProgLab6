@@ -1,9 +1,6 @@
 package network;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.Properties;
 
@@ -11,6 +8,7 @@ public class Client {
     ObjectOutputStream serverWriter;
     ObjectInputStream serverReader;
     Socket clientSocekt;
+    Properties props = new Properties();
 
     public Respons sendRequest(Request request) throws IOException, ClassNotFoundException {
         this.openClientSocet();
@@ -22,13 +20,14 @@ public class Client {
     }
 
     private void openClientSocet() throws IOException {
-        int port;
-        String host;
+        final int port;
+        final String host;
 
-        Properties props = new Properties();
-        props.load(new FileInputStream("C:\\Users\\USER\\IdeaProjects\\Client\\src\\res.properties"));
-        port = Integer.parseInt(props.getProperty("port"));
-        host = String.valueOf(props.getProperty("host"));
+        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("res.properties");
+
+        this.props.load(in);
+        port = Integer.parseInt(this.props.getProperty("port"));
+        host = String.valueOf(this.props.getProperty("host"));
         try {
             clientSocekt = new Socket(host, port);
             serverWriter = new ObjectOutputStream(clientSocekt.getOutputStream());
