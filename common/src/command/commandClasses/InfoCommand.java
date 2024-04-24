@@ -13,8 +13,8 @@ public class InfoCommand implements Command {
     private final static long serialVersionUID = 16L;
 
     @Override
-    public Respons execute(Request request, AbstractReciever T) {
-        return T.info();
+    public Respons execute(Request request, AbstractReciever reciver) {
+        return reciver.info();
     }
 
     @Override

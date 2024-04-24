@@ -12,8 +12,8 @@ public class ShowCommand implements Command {
     @Serial
     private final static long serialVersionUID = 25L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) {
-        return T.show();
+    public Respons execute(Request request, AbstractReciever reciver) {
+        return reciver.show();
     }
 
     @Override

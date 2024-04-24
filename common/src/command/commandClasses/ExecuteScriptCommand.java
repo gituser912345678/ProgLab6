@@ -16,8 +16,8 @@ public class ExecuteScriptCommand implements Command {
     @Serial
     private final static long serialVersionUID = 13L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException, IncorrectDataException, NoElementException, IOException {
-        return T.executeScript(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException, IncorrectDataException, NoElementException, IOException {
+        return reciver.executeScript(request);
     }
 
     @Override

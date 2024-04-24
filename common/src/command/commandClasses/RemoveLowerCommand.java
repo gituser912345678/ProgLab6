@@ -14,8 +14,8 @@ public class RemoveLowerCommand implements Command {
     @Serial
     private final static long serialVersionUID = 22L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException, IncorrectDataException {
-        return T.removeLower(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException, IncorrectDataException {
+        return reciver.removeLower(request);
     }
 
     @Override

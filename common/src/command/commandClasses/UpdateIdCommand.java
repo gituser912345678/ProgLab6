@@ -13,8 +13,8 @@ public class UpdateIdCommand implements Command {
     @Serial
     private final static long serialVersionUID = 27L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws NoElementException {
-        return T.updateId(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws NoElementException {
+        return reciver.updateId(request);
     }
 
     @Override

@@ -15,8 +15,8 @@ public class FilterByHairColorCommand implements Command {
     @Serial
     private final static long serialVersionUID = 15L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException, IncorrectDataException, NoElementException {
-        return T.filterByHairColor(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException, IncorrectDataException, NoElementException {
+        return reciver.filterByHairColor(request);
     }
 
     @Override

@@ -13,8 +13,8 @@ public class ClearCommand implements Command {
     @Serial
     private final static long serialVersionUID = 12L;
 
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException {
-        return T.clear();
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException {
+        return reciver.clear();
     }
 
     @Override

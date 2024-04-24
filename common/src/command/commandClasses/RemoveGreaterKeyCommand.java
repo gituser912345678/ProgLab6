@@ -15,8 +15,8 @@ public class RemoveGreaterKeyCommand implements Command {
     private final static long serialVersionUID = 20L;
 
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException, IncorrectDataException {
-        return T.removeGreaterKey(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException, IncorrectDataException {
+        return reciver.removeGreaterKey(request);
     }
 
     @Override

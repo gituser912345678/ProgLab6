@@ -4,27 +4,27 @@ import network.Request;
 import network.Respons;
 
 public interface AbstractReciever {
-    abstract Respons info();
+   Respons info();
 
-    abstract Respons clear();
+    Respons clear();
 
-    abstract Respons executeScript(Request request);
+    Respons executeScript(Request request);
 
-    abstract Respons filterByHairColor(Request request);
+    Respons filterByHairColor(Request request);
 
-    abstract Respons help();
+    Respons help();
 
-    abstract Respons insert(Request request);
+    Respons insert(Request request);
 
-    abstract Respons removeGreater(Request request);
+    Respons removeGreater(Request request);
 
-    abstract Respons removeGreaterKey(Request request);
+    Respons removeGreaterKey(Request request);
 
-    abstract Respons removeKey(Request request);
+    Respons removeKey(Request request);
 
-    abstract Respons removeLower(Request request);
+    Respons removeLower(Request request);
 
-    abstract Respons show();
+    Respons show();
 
-    abstract Respons updateId(Request request);
+    Respons updateId(Request request);
 }

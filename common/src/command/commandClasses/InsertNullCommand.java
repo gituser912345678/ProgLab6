@@ -13,8 +13,8 @@ public class InsertNullCommand implements Command {
     private final static long serialVersionUID = 17L;
 
     @Override
-    public Respons execute(Request request, AbstractReciever T) {
-        return T.insert(request);
+    public Respons execute(Request request, AbstractReciever reciver) {
+        return reciver.insert(request);
     }
 
     @Override

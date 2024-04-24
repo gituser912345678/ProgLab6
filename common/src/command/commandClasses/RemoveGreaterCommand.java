@@ -14,8 +14,8 @@ public class RemoveGreaterCommand implements Command {
     @Serial
     private final static long serialVersionUID = 19L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException, IncorrectDataException {
-        return T.removeGreater(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException, IncorrectDataException {
+        return reciver.removeGreater(request);
     }
 
     @Override

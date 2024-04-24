@@ -13,8 +13,8 @@ public class HelpCommand implements Command, Serializable {
     @Serial
     private final static long serialVersionUID = 11L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) {
-        return T.help();
+    public Respons execute(Request request, AbstractReciever reciver) {
+        return reciver.help();
     }
 
     @Override

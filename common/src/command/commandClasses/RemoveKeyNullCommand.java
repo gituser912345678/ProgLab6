@@ -13,8 +13,8 @@ public class RemoveKeyNullCommand implements Command {
     @Serial
     private final static long serialVersionUID = 21L;
     @Override
-    public Respons execute(Request request, AbstractReciever T) throws UnknowElementException {
-        return T.removeKey(request);
+    public Respons execute(Request request, AbstractReciever reciver) throws UnknowElementException {
+        return reciver.removeKey(request);
     }
 
     @Override
